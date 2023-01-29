@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.back-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6) 100%, rgba(0, 0, 0, 0.6) 100%), url("/img/home.jpg");
+    background-color: rgb(36, 34, 34);
+    background-size: cover;
+    background-position: center;
+    max-width: 2560px;
+    height: 800px;
+    margin: 0 auto;
+}
+
+.container {
+    width: 80%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    align-items: center;
+}
+
+.nav > a {
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: 40px;
+    transition: all 150ms ease-in-out;
+}
+
+.nav > a:last-child {
+    margin-right: 0;
+}
+
+.nav > a:hover {
+    color: rgb(179, 179, 179);
+}
+
+.logo {
+    color: #fff;
+    font-size: 25px;
+    transition: all 150ms ease-in-out;
+}
+
+.logo:hover {
+    color: rgb(179, 179, 179);
+}
+
+.header-background {
+    backdrop-filter: blur(6px);
+    height: 80px;
+}
+
+@media screen and (max-width: 850px) {
+    .header, .header-background {
+        display: none;
+    }
+}
+
+/* MOB VERSION */
+
+.mob-open, .mob-close {
+    width: 30px;
+    height: 30px;
+}
+
+.mob-open {
+    position: fixed;
+    right: 35px;
+    top: 15px;
+}
+
+.mob-list {
+    height: 100%;
+    width: 35%;
+    position: fixed;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+    background-color: #2d2d2d;
+}
+
+.mob-list_item {
+    color: #fff;
+}
+
+.mob-list_item:first-child {
+    margin-bottom: 50px;
+}
+
+.mob-close {
+    position: fixed;
+    right: 30px;
+    top: 15px;
+    z-index: 5;
+}
+
+@media  screen and (min-width:850px) {
+    .mob-menu {
+        display: none;
+    }
+}
+/* js styling */
+
+.opened {
+    opacity: 1;
+    animation: openAnim 200ms ease-in-out;
+}
+
+.close {
+    opacity: 0;
+    animation: closeAnim 200ms ease-in-out;
+}
+
+/* animations  */
+
+@keyframes openAnim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes closeAnim {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
